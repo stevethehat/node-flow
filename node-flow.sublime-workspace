@@ -1,0 +1,406 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"s",
+				"script"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"hiera",
+				"hierarchy"
+			],
+			[
+				"a",
+				"add_node"
+			],
+			[
+				"node_a",
+				"node_actions_filename"
+			],
+			[
+				"node",
+				"node_actions"
+			],
+			[
+				"mode",
+				"module_processor"
+			],
+			[
+				"dec",
+				"decorator_info"
+			],
+			[
+				"pro",
+				"process_possible_node_class"
+			],
+			[
+				"de",
+				"decorator_info"
+			],
+			[
+				"_",
+				"_current_class"
+			],
+			[
+				"pr",
+				"process_node_action"
+			],
+			[
+				"args",
+				"args_map"
+			],
+			[
+				"end",
+				"ensure_definition_element"
+			],
+			[
+				"cla",
+				"classes"
+			],
+			[
+				"pare",
+				"parent_nodes"
+			],
+			[
+				"def",
+				"definition"
+			],
+			[
+				"node_cla",
+				"node_classes"
+			],
+			[
+				"node_def",
+				"node_definitions_filename"
+			],
+			[
+				"node_",
+				"node_classes_filename"
+			],
+			[
+				"node_de",
+				"node_definitions_filename"
+			],
+			[
+				"no",
+				"node_definitions_filename"
+			],
+			[
+				"as",
+				"ast_loader"
+			],
+			[
+				"nodeclass",
+				"node_classes_file"
+			],
+			[
+				"node_classes",
+				"node_classes_file"
+			],
+			[
+				"test",
+				"test_classes"
+			],
+			[
+				"file",
+				"file_name"
+			],
+			[
+				"wal",
+				"walk_directory"
+			],
+			[
+				"nod",
+				"nodedefinition_processor"
+			],
+			[
+				"w",
+				"walk_directories"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/stevethehat/Development/clients/LV/psup/05/urlloads.txt",
+		"/Users/stevethehat/Development/clients/LV/psup/01/urlloading29.txt",
+		"/Users/stevethehat/Development/clients/LV/psup/05/urlloading29.txt",
+		"/Users/stevethehat/Development/clients/LV/psup/01/2015-01-29.zip",
+		"/Users/stevethehat/Development/clients/LV/psup/05/urlloading28.txt",
+		"/Users/stevethehat/Development/clients/LV/psup/05/urlloading30.txt",
+		"/Users/stevethehat/Development/clients/LV/psup/05/2015-01-30.log",
+		"/Users/stevethehat/Development/clients/LV/psup/01/2015-01-29.log",
+		"/Users/stevethehat/Development/clients/LV/psup/01/urlloading28.txt",
+		"/Users/stevethehat/Development/clients/LV/psup/01/urlloading.txt",
+		"/Users/stevethehat/Development/node/test/testapp.js",
+		"/Users/stevethehat/Development/node/test/index.js",
+		"/Users/stevethehat/Development/node/test/application.ts",
+		"/Users/stevethehat/Development/node/test/buildjs.sh",
+		"/Users/stevethehat/Development/flow/static/app/js/workspace.ts",
+		"/Users/stevethehat/Development/flow/static/app/js/templating.ts",
+		"/Users/stevethehat/Development/node/test/application.js",
+		"/Users/stevethehat/Development/node/test.js",
+		"/Users/stevethehat/Development/Python/twitterscrape.py",
+		"/Users/stevethehat/Development/test/selenium_test.py",
+		"/Users/stevethehat/Development/flow/flow/app/nodetypes.py",
+		"/Users/stevethehat/Development/flow/flow/tests/asttest.py",
+		"/Users/stevethehat/Development/flow/flow/tests/decorators.py",
+		"/Users/stevethehat/Development/flow/flow/tests/introspection.py",
+		"/Users/stevethehat/Development/flow/modules/web/page/page.py",
+		"/Users/stevethehat/Development/flow/modules/web/page/page.nodedef",
+		"/Users/stevethehat/Development/flow/modules/web/website/website.nodedef",
+		"/Users/stevethehat/Development/flow/flow/app/server.py",
+		"/Users/stevethehat/Development/flow/modules/core/userfolder.nodedef",
+		"/Users/stevethehat/Development/flow/modules/core/admin/admin.nodedef",
+		"/Users/stevethehat/Development/flow/modules/core/root/root.nodedef",
+		"/Users/stevethehat/Development/flow/modules/core/user.nodedef",
+		"/Users/stevethehat/Development/flow/flow/app/nodestore_file.py",
+		"/Users/stevethehat/Development/flow/flow/app/hierarchy.py",
+		"/Users/stevethehat/Development/flow/flow/app/env.py",
+		"/Users/stevethehat/Development/flow/flow/app/flow.py",
+		"/Users/stevethehat/Development/flow/flow/app/admin_handler.py",
+		"/Users/stevethehat/Development/flow/flow/app/store.py",
+		"/Users/stevethehat/Development/flow/lint-python.sh",
+		"/Users/stevethehat/Development/flow/static/app/js/lint.sh",
+		"/Users/stevethehat/Development/flow/lint-python.config",
+		"/Users/stevethehat/Development/flow/static/app/js/buildjs.sh",
+		"/Users/stevethehat/Development/flow/static/app/js/server.ts",
+		"/Users/stevethehat/Development/flow/static/app/js/actions.ts",
+		"/Users/stevethehat/Development/flow/static/app/html/workspace.htm",
+		"/Users/stevethehat/Development/flow/static/app/js/libdef/jquery.d.ts",
+		"/Users/stevethehat/Development/flow/static/app/js/menus.ts",
+		"/Users/stevethehat/Development/flow/static/app/js/dialogs.ts",
+		"/Users/stevethehat/Development/flow/static/app/js/lintconfig.json",
+		"/Users/stevethehat/Development/flow/static/app/js/components.ts",
+		"/Users/stevethehat/Development/flow/static/app/html/templates/main.htm",
+		"/Users/stevethehat/Development/flow/static/app/html/templates/alert.htm",
+		"/Users/stevethehat/Development/flow/static/app/html/templates/popup.htm",
+		"/Users/stevethehat/Development/flow/static/app/js/listings.ts",
+		"/Users/stevethehat/Development/flow/static/app/css/app.css",
+		"/Users/stevethehat/Development/flow/static/app/js/handlebars.d.ts",
+		"/Users/stevethehat/Development/flow/static/app/html/templates/list.htm",
+		"/Users/stevethehat/Development/flow/static/app/js/jquery.d.ts",
+		"/Users/stevethehat/Development/flow/static/app/html/templates.htm",
+		"/Users/stevethehat/Development/flow/static/app/html/workspacemenu",
+		"/Users/stevethehat/Development/flow/static/app/js/flowapp.js",
+		"/Users/stevethehat/Development/flow/static/app/js/jquery.min.js",
+		"/Users/stevethehat/Development/flow/static/app/html/jwplayer/example.htm",
+		"/Users/stevethehat/Development/flow/static/app/html/workspaceexample.htm",
+		"/Users/stevethehat/Development/flow/static/app/css/font-awesome.css",
+		"/Users/stevethehat/Development/flow/flow/app/config.py",
+		"/Users/stevethehat/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/stevethehat/Development/flow/static/app/js/untitled",
+		"/Users/stevethehat/Development/flow/static/app/html/1/workspacemenu",
+		"/Users/stevethehat/Development/flow/tests.py",
+		"/Users/stevethehat/Development/flow/flow/tests/automated/node_loading_1.py",
+		"/Users/stevethehat/Development/flow/flow/server_base.py",
+		"/Users/stevethehat/Development/flow/flow/server.py",
+		"/Users/stevethehat/Development/flow/flow/app/node.py",
+		"/Users/stevethehat/Development/flow/flow/app/decorators.py",
+		"/Users/stevethehat/Development/flow/flow/app/flowbase.py",
+		"/Users/stevethehat/Development/flow/modules/web/websites/websites.nodedef",
+		"/Users/stevethehat/Development/flow/app.py",
+		"/Users/stevethehat/Development/c5/testing/seleniumtest.py",
+		"/Users/stevethehat/Development/flow/modules/web/website/website.py"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/stevethehat/Development/flow/flow"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"100127850863000",
+			"LoadUrls Exception",
+			"timeout",
+			"urls loaded",
+			"urls",
+			"store",
+			"'",
+			"compile",
+			"promise",
+			"ast_loader"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"",
+			"load_ast"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "node-flow.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 337.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

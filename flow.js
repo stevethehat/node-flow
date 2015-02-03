@@ -1,7 +1,3 @@
-var http = require("http");
+var application = require('./flow/application.js').createApplication();
+application.run();
 
-http.createServer(function(request, response) {
-  response.writeHead(200, {"Content-Type": "text/html"});
-  response.write("Hello World");
-  response.end();
-}).listen(8080);
