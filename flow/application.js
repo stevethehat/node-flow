@@ -19,7 +19,9 @@ Application.prototype.run = function(){
     		return;
   		} else {
   			response.writeHead(200, {'Content-Type': 'text/html'});
-  			response.write('<html><head><link rel="stylesheet" href="/static/css/pure-min.css"/></head><body><h1>Hello World</h1></body></html>');
+  			//response.write('<html><head><link rel="stylesheet" href="/static/css/pure-min.css"/></head><body><h1>Hello World</h1></body></html>');
+  			var template = require('../util/templaterenderer').createTemplateRenderer();
+  			response.write(template.render());
   			response.end();
   		}
 	}).listen(8080);	
