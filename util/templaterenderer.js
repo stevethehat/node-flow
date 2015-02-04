@@ -10,7 +10,7 @@ TemplateRenderer = function(){
 	self.compiledTransform = self.handlebars.compile(String(require('fs').readFileSync(self.templatePath)));
 }
 
-TemplateRenderer.prototype.render = function(){
+TemplateRenderer.prototype.render = function(data){
 	var self = this;
-	return(self.compiledTransform({}));
+	return(self.compiledTransform(data));
 }

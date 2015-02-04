@@ -1,0 +1,29 @@
+$background: yellow
+$header: green
+$footer: red
+
+
+
+#header
+  position:fixed
+  top:top
+  left:0px
+  right:0px
+  background-color:$header
+  height:70px
+
+#content
+  padding-top:70px
+  padding-bottom:40px
+  overflow:scroll
+  background-color:$background
+
+#footer
+  position:fixed
+  bottom:0px
+  left:0px
+  right:0px
+  background-color:$footer
+  height:40px
+
+

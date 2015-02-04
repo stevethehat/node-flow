@@ -14,11 +14,16 @@ Application.prototype.run = function(){
 
 	router.addStatic('/static', process.cwd() + '/static');
 	router.addHandler('*', function(context){
-		context.response.writeHead(200, {'Content-Type': 'text/html'});
-  		//response.write('<html><head><link rel="stylesheet" href="/static/css/pure-min.css"/></head><body><h1>Hello World</h1></body></html>');
+		context.log.writeStartRequest();
   		var template = require('../util/templaterenderer').createTemplateRenderer();
-  		context.response.write(template.render());
-  		context.response.end();
+  		context.sendResponse(
+  			template.render( 
+  				{
+  					'title': 'Flow'
+  				} 
+  			)
+  		);
+  		context.log.writeEndRequest();
 	});
 	router.start();
 }

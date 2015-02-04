@@ -13,7 +13,7 @@ Router = function(context){
 
 Router.prototype.addStatic = function(url, path){
 	var self = this;
-	self.mount = st({ path: path, url: url });
+	self.mount = st({ path: path, url: url, cache: false });
 	self.context.log.write('added static route "' + url + '" > "' + path + '"');
 }
 
