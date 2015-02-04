@@ -13,17 +13,22 @@ Application.prototype.run = function(){
 	var router = require('../util/router.js').createRouter(context);
 
 	router.addStatic('/static', process.cwd() + '/static');
-	router.addHandler('*', function(context){
-		context.log.writeStartRequest();
-  		var template = require('../util/templaterenderer').createTemplateRenderer();
-  		context.sendResponse(
-  			template.render( 
-  				{
-  					'title': 'Flow'
-  				} 
-  			)
-  		);
-  		context.log.writeEndRequest();
-	});
+	router.addHandler('/node/',
+		function(context){
+
+		}
+	);
+	router.addHandler('*', 
+		function(context){
+  			var template = require('../util/templaterenderer').createTemplateRenderer();
+  			context.sendResponse(
+  				template.render( 
+  					{
+  						'title': 'Flow'
+  					} 
+  				)
+  			);
+		}
+	);
 	router.start();
 }
