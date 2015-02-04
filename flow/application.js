@@ -9,20 +9,16 @@ Application = function(){
 
 Application.prototype.run = function(){
 	var self = this;
-	var http = require('http'), st = require('st');
 	var context = require('../util/context.js').createContext();
-	var mount = st({ path: process.cwd() + '/static', url: '/static' });
+	var router = require('../util/router.js').createRouter(context);
 
-	http.createServer(function(request, response) {
-		var stHandled = mount(request, response);
-  		if (stHandled){
-    		return;
-  		} else {
-  			response.writeHead(200, {'Content-Type': 'text/html'});
-  			//response.write('<html><head><link rel="stylesheet" href="/static/css/pure-min.css"/></head><body><h1>Hello World</h1></body></html>');
-  			var template = require('../util/templaterenderer').createTemplateRenderer();
-  			response.write(template.render());
-  			response.end();
-  		}
-	}).listen(8080);	
+	router.addStatic('/static', process.cwd() + '/static');
+	router.addHandler('*', function(context){
+		context.response.writeHead(200, {'Content-Type': 'text/html'});
+  		//response.write('<html><head><link rel="stylesheet" href="/static/css/pure-min.css"/></head><body><h1>Hello World</h1></body></html>');
+  		var template = require('../util/templaterenderer').createTemplateRenderer();
+  		context.response.write(template.render());
+  		context.response.end();
+	});
+	router.start();
 }

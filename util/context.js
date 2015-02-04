@@ -5,8 +5,9 @@ exports.createContext = function(){
 }
 
 Context = function(){
-	this.Log = require('./log.js').createLog();
-	this.Log.write('creating context');
+	var self = this;
+	self.log = require('./log.js').createLog(self);
+	self.log.write('creating context');
 }
 
 Context.prototype.test = function(){
