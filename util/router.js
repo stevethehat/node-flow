@@ -1,4 +1,5 @@
-var http = require('http'), st = require('st'), _ = require('underscore');
+var http = require('http'), st = require('st'), _ = require('underscore'), util = require('util');
+var _str = require('underscore.string');
 
 exports.createRouter = function(context){
 	return(new Router(context));
@@ -26,16 +27,19 @@ Router.prototype.addHandler = function(name, url, handler){
 			url: url,
 			handler: handler
 		};
-
 	self.context.log.write('added handler route "' + url + '"');
 }
 
 Router.prototype.getHandler = function(url){
 	var self = this;
   	var result = null;
+
+  	self.context.log.write('url = ' + typeof(url));
+
+  	self.context.log.write(util.inspect(url));
   	_.each(self.handlers,
   		function(handler, index, list){
-  			if(handler.url == '*'){
+  			if(result == null && _str.startsWith(url, handler.url)){
   				self.context.log.write('use handler "' + handler.name + '"');
   				result = handler.handler;
   			}

@@ -19,7 +19,7 @@ Application.prototype.run = function(){
 		}
 	);
 
-	router.addHandler('default', '*', 
+	router.addHandler('default', '/', 
 		function(context){
   			var template = require('../util/templaterenderer').createTemplateRenderer();
   			context.sendResponse(
