@@ -1,10 +1,11 @@
-exports.createNode = function(context, nodeUri, nodeData){
-	return(new Node(context, nodeUri, nodeData))
+exports.createNode = function(context, hierarchy, nodeUri, nodeData){
+	return(new Node(context, hierarchy, nodeUri, nodeData))
 }
 
-Node = function(context, nodeUri, nodeData){
+Node = function(context, hierarchy, nodeUri, nodeData){
 	var self = this;
 	self.context = context;
+	self.hierarchy = hierarchy;
 	self.nodeUri = nodeUri;
 	self.nodeData = nodeData;
 }
@@ -26,8 +27,6 @@ Node.prototype.wrapActionResult = function(action, result){
 
 Node.prototype.runAction = function(action, actionComplete){
 	var self = this;
-	self.context.log.write('in run action');
-
 	self[action](
 		function(actionResult){
 			actionComplete(
@@ -37,23 +36,20 @@ Node.prototype.runAction = function(action, actionComplete){
 					result: actionResult				
 				}
 			);
-			//var result = self.wrapActionResult('info', self.nodeData);
-			//self.context.log.write(JSON.stringify(result));
-			//actionComplete(result);
 		}
 	);
-	/*
-		function(actionResult){
-			self.context.log.write('run action done ' + JSON.stringify(actionResult));
-			actionComplete('here');
-		}
-	);
-	*/
 }
 
 Node.prototype.info = function(actionComplete){
 	var self = this;
-	self.context.log.write('in info action');
-
 	actionComplete(self.nodeData);
+}
+
+Node.prototype.getchildren = function(actionComplete){
+	var self = this;
+	self.hierarchy.getChildNodes(self.nodeUri, 
+		function(){
+			actionComplete({});
+		}
+	);
 }

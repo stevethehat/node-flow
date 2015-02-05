@@ -14,8 +14,20 @@ Hierarchy.prototype.getNode = function(nodeUri, nodeLoaded){
 	var fileName = self.context.mapPath(_str.sprintf('/nodes/%s/properties', [nodeUri]));
 	self.context.loadFile(fileName, 
 		function(fileData){
-			var resultNode = node.createNode(self.context, nodeUri, JSON.parse(fileData));
+			self.context.log.write('')
+			var resultNode = node.createNode(self.context, self, nodeUri, JSON.parse(fileData));
 			nodeLoaded(resultNode);
+		}
+	);
+}
+
+Hierarchy.prototype.getChildNodes = function(nodeUri, childrenLoaded){
+	var self = this;
+	var directoryName = self.context.mapPath(_str.sprintf('/nodes/%s', [nodeUri]));
+	self.context.listDirectories(directoryName,
+		function(){
+			self.context.log.write('here');
+			childrenLoaded();
 		}
 	);
 }
