@@ -13,14 +13,14 @@ Log = function(){
 	self.write('init logger in "' + self.logPath + '"');
 }
 
-Log.prototype.writeStartRequest = function(){
+Log.prototype.writeStartRequest = function(url){
 	var self = this;
-	self.write('>>>');
+	self.write('>>> "' + url + '"');
 }
 
-Log.prototype.writeEndRequest = function(){
+Log.prototype.writeEndRequest = function(url){
 	var self = this;
-	self.write('<<<');
+	self.write('<<< "' + url + '"');
 }
 
 Log.prototype.write = function(message){

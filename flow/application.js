@@ -13,12 +13,13 @@ Application.prototype.run = function(){
 	var router = require('../util/router.js').createRouter(context);
 
 	router.addStatic('/static', process.cwd() + '/static');
-	router.addHandler('/node/',
+	router.addHandler('node', '/node/',
 		function(context){
 
 		}
 	);
-	router.addHandler('*', 
+
+	router.addHandler('default', '*', 
 		function(context){
   			var template = require('../util/templaterenderer').createTemplateRenderer();
   			context.sendResponse(

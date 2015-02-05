@@ -18,16 +18,16 @@ Router.prototype.addStatic = function(url, path){
 	self.context.log.write('added static route "' + url + '" > "' + path + '"');
 }
 
-Router.prototype.addHandler = function(url, handler){
+Router.prototype.addHandler = function(name, url, handler){
 	var self = this;
 	self.handlers[url] = 
 		{
+			name: name,
 			url: url,
 			handler: handler
 		};
 
 	self.context.log.write('added handler route "' + url + '"');
-	self.context.log.write(self.handlers);
 }
 
 Router.prototype.getHandler = function(url){
@@ -35,14 +35,12 @@ Router.prototype.getHandler = function(url){
   	var result = null;
   	_.each(self.handlers,
   		function(handler, index, list){
-  			self.context.log.write('check handler "' + handler.url + '"');
   			if(handler.url == '*'){
-  				self.context.log.write('set handler');
+  				self.context.log.write('use handler "' + handler.name + '"');
   				result = handler.handler;
   			}
   		}
   	);
-  	self.context.log.write(result);
   	return(result);
 }
 
@@ -52,14 +50,16 @@ Router.prototype.start = function(){
 	http.createServer(function(request, response) {
 		var stHandled = self.mount(request, response);
   		if (stHandled){
+  			self.context.log.write('static "' + request.url + '"');
     		return;
   		} else {
- 			self.context.log.writeStartRequest();
+ 			self.context.log.writeStartRequest(request.url);
   			self.context.request = request;
   			self.context.response = response;
   			var handler = self.getHandler('/');
   			handler(self.context);
-			self.context.log.writeEndRequest();
+			self.context.log.writeEndRequest(request.url);
+			self.context.log.write('');
   		}
 	}).listen(8080);		
 }
