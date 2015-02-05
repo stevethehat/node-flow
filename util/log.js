@@ -1,13 +1,14 @@
-var _str = require('underscore.string'), moment = require('moment'), path = require('path');
+var _str = require('underscore.string'), moment = require('moment');
 
-exports.createLog = function(){
-	return(new Log());
+exports.createLog = function(context){
+	return(new Log(context));
 }
 
-Log = function(){
+Log = function(context){
 	var self = this;
+	self.context = context;
 	
-	self.logPath = path.resolve(process.cwd(), 'logs');
+	self.logPath = self.context.mapPath('/logs');
 	self.writef('init logger in "%s"', [self.logPath]);
 }
 
