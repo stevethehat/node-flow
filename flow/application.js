@@ -1,3 +1,4 @@
+var _ = require('underscore');
 
 exports.createApplication = function(){
 	return(new Application());
@@ -15,7 +16,25 @@ Application.prototype.run = function(){
 	router.addStatic('/static', process.cwd() + '/static');
 	router.addHandler('node', '/node/',
 		function(context){
-
+			var url = context.request.url.split('/');
+			context.log.writef('url = "%s"', [context.request.url]);
+			var action = url[2];
+			var nodeUri = _.rest(url, 3);
+			context.log.writef('runaction "%s"', [action]);
+			context.log.writef('on "%s"', [nodeUri.join('/')]);
+			
+			context.contentType = 'text/json';
+			context.sendResponse(
+				JSON.stringify(
+					{
+						location: nodeUri.join('/'),
+						action: action,
+						data: {
+							description: 'home'
+						}
+					}
+				)
+			);
 		}
 	);
 

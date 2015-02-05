@@ -34,13 +34,11 @@ Router.prototype.getHandler = function(url){
 	var self = this;
   	var result = null;
 
-  	self.context.log.write('url = ' + typeof(url));
-
   	self.context.log.write(util.inspect(url));
   	_.each(self.handlers,
   		function(handler, index, list){
   			if(result == null && _str.startsWith(url, handler.url)){
-  				self.context.log.write('use handler "' + handler.name + '"');
+  				self.context.log.writef('use handler "%s"', [handler.name]);
   				result = handler.handler;
   			}
   		}
@@ -54,13 +52,13 @@ Router.prototype.start = function(){
 	http.createServer(function(request, response) {
 		var stHandled = self.mount(request, response);
   		if (stHandled){
-  			self.context.log.write('static "' + request.url + '"');
+  			self.context.log.writef('static "%s"', [request.url]);
     		return;
   		} else {
  			self.context.log.writeStartRequest(request.url);
   			self.context.request = request;
   			self.context.response = response;
-  			var handler = self.getHandler('/');
+  			var handler = self.getHandler(request.url);
   			handler(self.context);
 			self.context.log.writeEndRequest(request.url);
 			self.context.log.write('');

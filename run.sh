@@ -2,4 +2,4 @@
 
 clear
 
-node flow.js
+supervisor flow.js

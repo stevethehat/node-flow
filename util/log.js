@@ -1,3 +1,4 @@
+var _str = require('underscore.string'), moment = require('moment'), path = require('path');
 
 exports.createLog = function(){
 	return(new Log());
@@ -5,27 +6,29 @@ exports.createLog = function(){
 
 Log = function(){
 	var self = this;
-	var path = require('path');
-	self.moment = require('moment');
-
-
+	
 	self.logPath = path.resolve(process.cwd(), 'logs');
-	self.write('init logger in "' + self.logPath + '"');
+	self.writef('init logger in "%s"', [self.logPath]);
 }
 
 Log.prototype.writeStartRequest = function(url){
 	var self = this;
-	self.write('>>> "' + url + '"');
+	self.writef('>>> "%s"', [url]);
 }
 
 Log.prototype.writeEndRequest = function(url){
 	var self = this;
-	self.write('<<< "' + url + '"');
+	self.writef('<<< "%s"', [url]);
 }
 
 Log.prototype.write = function(message){
 	var self = this;
-	console.log(self.moment().format('HH:mm:ss') + ' ' + message);
+	self.writef(message, []);
+}
+
+Log.prototype.writef = function(message, arguments){
+	var self = this;
+	console.log(moment().format('HH:mm:ss ') + _str.sprintf(message, arguments));
 }
 
 Log.prototype.writeException = function(){
